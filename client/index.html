@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class='header__logo-wrapper'>
+        <img class='header__logo-img' src="img/police.png" alt="this is car logo">
+        <h1 class="header__title">
+          Pocket <br>
+          Police
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <section class="authorization">
+
+
+    <div class='login-form-wrapper'>
+      <div class="disable container authorization__container login">
+        <h2 class="authorization__title">
+          Authorization
+        </h2>
+        <form action="" class='authorization__login-form authorization-form'>
+          <label class="authorization__login-label">
+            <input class="authorization__input input" type="email" name="email" placeholder="Enter your email">
+            <div class="authorization__input-email-message error-message"></div>
+          </label>
+          <label class="authorization__label">
+            <input class="authorization__input input" type="password" name="password" placeholder="Enter your password">
+            <div class="authorization__input-password-message error-message"></div>
+          </label>
+          <button class="authorization__button button">
+            Login
+          </button>
+        </form>
+        <a class='authorization__remind-password-link' href='#'>
+          Forget your password?
+        </a>
+        <button class="authorization__registration-button button">
+          Create new account
+        </button>
+      </div>
+    </div>
+
+    <div class='registration-form-wrapper disable'>
+      <div class="container authorization__container registration">
+        <h2 class="registration__title">
+          Registration
+        </h2>
+        <form action="" class='registration__form authorization-form'>
+          <label class="registration__label">
+            <input class="registration__input input" type="email" name="email" placeholder="Enter your email">
+            <div class="registration__input-message"></div>
+          </label>
+          <label class="registration__label">
+            <input class="registration__input input" type="password" name="password" placeholder="Create your password">
+            <div class="registration__input-message"></div>
+          </label>
+          <label class="registration__label">
+            <input class="registration__input input" type="password" name="password" placeholder="Confirm your password">
+            <div class="registration__input-message"></div>
+          </label>
+          <button class="registration__button button">
+            Registration
+          </button>
+        </form>
+        <p class='registration__login-text'>
+          Already have account?
+        </p>
+        <button class="registration__login-button button">
+          Login
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>

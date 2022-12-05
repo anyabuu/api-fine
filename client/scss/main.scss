@@ -1,0 +1,112 @@
+.header {
+  border-bottom: 2px solid black;
+  background-color: lightskyblue;
+  padding: 10px;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  gap: 5px;
+}
+
+.header__logo-img {
+  height: 70%;
+}
+
+.header__title {
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: black;
+}
+
+.authorization {
+  padding-top: 80px;
+}
+
+.authorization__container {
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px;
+  border: 2px black solid;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authorization__title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  text-align: center;
+  padding-bottom: 30px;
+  color: brown;
+}
+
+.authorization-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.authorization__button {
+  background-color: firebrick;
+  color: white;
+  margin-top: 5px;
+}
+
+.authorization__remind-password-link {
+  margin: 20px 0 20px 0;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: cornflowerblue;
+  cursor: pointer;
+}
+
+.authorization__registration-button {
+  background: white;
+  border: 2px black solid;
+  height: 50px;
+}
+
+.registration__title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: darkolivegreen;
+  padding-bottom: 30px;
+}
+
+.registration__login-text {
+  margin: 20px 0 20px 0;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: black;
+  cursor: pointer;
+}
+
+.registration__button {
+  background-color: darkseagreen;
+}
+
+.registration__login-button {
+  background-color: white;
+  border: 2px black solid;
+}
+
+
+
+
+
+
