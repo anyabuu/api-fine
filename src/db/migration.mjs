@@ -31,6 +31,14 @@ export async function migration() {
         FOREIGN KEY (userid) REFERENCES users(id)
       );
     `);
+  await client.query(`
+    CREATE TABLE IF NOT EXISTS balance(
+       id SERIAL PRIMARY KEY,
+       amount INTEGER DEFAULT(0),
+       userid INTEGER NOT NULL UNIQUE,
+       FOREIGN KEY (userid) REFERENCES users(id)
+    );
+  `);
   const adminEmail = 'admin@rammfall.com';
   const { rows } = await client.query('SELECT * FROM users WHERE email=$1;', [
     adminEmail,
@@ -38,7 +46,7 @@ export async function migration() {
   if (!rows.length) {
     await client.query(
       'INSERT INTO users (name, email, password, role) VALUES ($1, $2, $3, $4);',
-      ['admin', 'admin@rammfall.com', await hash('admin1234', 10), 'admin']
+      ['admin', adminEmail, await hash('admin1234', 10), 'admin']
     );
   }
 }
