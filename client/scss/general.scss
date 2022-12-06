@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: Libre Baskerville, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  background-color: aliceblue;
+}
+
+.container {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-tablet {
+    width: 90%;
+  }
+}
+
+.disable {
+  display: none;
+}
+
+.button {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  border-radius: 8px;
+  width: 60%;
+  padding: 8px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px black solid;
+}
+
+.input {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 400;
+  width: 285px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.error-message {
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 400;
+  color: brown;
+  padding-top: 3px;
+}
+
+.cell {
+  border-right: 1px solid black;
+  padding: 10px;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+

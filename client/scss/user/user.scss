@@ -1,0 +1,52 @@
+.user {
+  padding-top: 40px;
+}
+
+.user__title {
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.1;
+  color: black;
+}
+
+.user__fines-title {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.main-cell {
+  font-weight: 800;
+}
+
+.user__fines-item {
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+  background-color: antiquewhite;
+}
+
+.user__fines-description {
+  width: 30%;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
+.user__fines-amount {
+  width: 15%;
+}
+
+.user__fines-deadline {
+  width: 15%;
+}
+
+.user__fines-name {
+  width: 25%;
+}
+
+.user__fines-status {
+  width: 15%;
+}
+
