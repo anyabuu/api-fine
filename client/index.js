@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   const registrationForm = document.querySelector('.registration__form');
   const registrationButton = document.querySelector('.authorization__registration-button');
 
+  const logoutButton = document.querySelector('.header__user-logout-button');
+
+
 
   function lengthValidate (element, minLength, maxLength) {
     if (element.value.length < minLength || element.value.length > maxLength){
@@ -48,9 +51,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         return lengthValidate(item, 8, 50)
       }
     })
-
-
-
 
   })
 

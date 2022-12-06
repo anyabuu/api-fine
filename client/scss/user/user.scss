@@ -17,21 +17,37 @@
   line-height: 1.1;
 }
 
-.main-cell {
-  font-weight: 800;
-}
-
 .user__fines-item {
   display: flex;
   border: 1px solid black;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: pink;
+}
+
+.user__fines-main-cell {
+  border-right: 1px solid black;
+  padding: 15px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.main-cell {
+  font-weight: 800;
+  background-color: skyblue;
+  text-align: center;
+}
+
+.user__fines-cell {
+  border-right: 1px solid black;
+  padding: 13px;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
 .user__fines-description {
   width: 30%;
-  border-right: 1px solid black;
-  padding: 10px;
 }
 
 .user__fines-amount {
@@ -48,5 +64,9 @@
 
 .user__fines-status {
   width: 15%;
+}
+
+.user__fines-item-paid {
+  background-color: darkseagreen;
 }
 
