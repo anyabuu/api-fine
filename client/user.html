@@ -17,163 +17,245 @@
         Police
       </h1>
     </div>
-    <button class='header__user-logout-button button'>
-      Logout
-    </button>
+    <nav class='header__nav'>
+      <ul class='header__nav-list'>
+        <li class='header__nav-list-item'>
+          <a class='header__nav-link' href='#'>
+            Profile
+          </a>
+        </li>
+        <li class='header__nav-list-item'>
+          <a class='header__nav-link' href='#'>
+            Fine board
+          </a>
+        </li>
+        <li class='header__nav-list-item'>
+          <a class='header__nav-link-logout' href='#'>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 
 <section class='user'>
   <div class='container user__container'>
-    <h2 class='user__title'>
-      Hello, user!
-    </h2>
-    <h2 class='user__fines-title'>
-      Your fines:
-    </h2>
 
-    <div class='user__fines-table'>
-      <ul class='user__fines-list'>
+    <div class='user__profile'>
+      <h2 class='user__title'>
+        Driver page
+        <p class='user__title-name'>
 
-        <li class='user__fines-item main-cell'>
-          <div class='user__fines-description user__fines-main-cell'>
-            Description
-          </div>
-          <div class='user__fines-amount user__fines-main-cell'>
-            Amount
-          </div>
-          <div class='user__fines-deadline user__fines-main-cell'>
-            Deadline
-          </div>
-          <div class='user__fines-name user__fines-main-cell'>
-            Officer name
-          </div>
-          <div class='user__fines-status user__fines-main-cell'>
-            Status
-          </div>
-        </li>
+        </p>
+      </h2>
+      <h2 class='user__change-email-title user__change-title'>
+        Change email
+      </h2>
+      <form action="" class='user__change-email-form'>
+        <label class='user__change-email-label user__change-label' for='changeEmail'>
+          <input class='user__change-email-input user__change-input' id='changeEmail' type='email' name='email' placeholder='Enter new email'>
+          <div class='user__change-email-error error-message'>
 
-        <li class="user__fines-item user__fines-item-paid">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
           </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
+        </label>
+        <button class='user__email-update-button user__change-button'>
+          Change
+        </button>
+
+      </form>
+
+      <h2 class='user__change-password-title user__change-title'>
+        Change password
+      </h2>
+      <form action="" class='user__change-password-form'>
+        <label class='user__change-password-label user__change-label' for='oldPassword'>
+          <input class='user__change-email-input user__change-input' id='oldPassword' type='password' name='oldPassword' placeholder='Enter old password'>
+          <div class='user__change-password-error error-message'>
+
           </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
+        </label>
+        <label class='user__change-password-label user__change-label' for='newPassword'>
+          <input class='user__change-email-input user__change-input' id='newPassword' type='password' name='password' placeholder='Enter new password'>
+          <div class='user__change-password-error error-message'>
+
           </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            paid
-          </div>
-        </li>
-        <li class="user__fines-item">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            unpaid
-          </div>
-        </li>
-        <li class="user__fines-item user__fines-item-paid">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            paid
-          </div>
-        </li>
-        <li class="user__fines-item user__fines-item-paid">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            paid
-          </div>
-        </li>
-        <li class="user__fines-item">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            unpaid
-          </div>
-        </li>
-        <li class="user__fines-item">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            unpaid
-          </div>
-        </li>
-        <li class="user__fines-item">
-          <div class='user__fines-description user__fines-cell'>
-            Speed under 300 km/h
-          </div>
-          <div class='user__fines-amount user__fines-cell'>
-            500$
-          </div>
-          <div class='user__fines-deadline user__fines-cell'>
-            12-12-2022
-          </div>
-          <div class='user__fines-name user__fines-cell'>
-            David Shnaider
-          </div>
-          <div class='user__fines-status user__fines-cell'>
-            unpaid
-          </div>
-        </li>
-      </ul>
+        </label>
+        <button class='user__password-update-button user__change-button'>
+          Change
+        </button>
+
+      </form>
     </div>
+
+    <div class='user__fine-board'>
+      <div class='user__fine-select-group'>
+        <p class='user__fines-type'>
+          Fines type
+        </p>
+        <div class='user__select-wrapper'>
+          <select class='user__fines-select' name='select'>
+            <option class='user__fines-select-opt' value='all'>
+              All
+            </option>
+            <option class='user__fines-select-opt' value='paid'>
+              Paid
+            </option>
+            <option class='user__fines-select-opt' value='unpaid'>
+              Unpaid
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class='user__fines-table'>
+        <ul class='user__fines-list'>
+
+          <li class='user__fines-item main-cell'>
+            <div class='user__fines-description user__fines-main-cell'>
+              Description
+            </div>
+            <div class='user__fines-amount user__fines-main-cell'>
+              Amount
+            </div>
+            <div class='user__fines-deadline user__fines-main-cell'>
+              Deadline
+            </div>
+            <div class='user__fines-name user__fines-main-cell'>
+              Officer name
+            </div>
+            <div class='user__fines-status user__fines-main-cell'>
+              Status
+            </div>
+          </li>
+
+          <li class="user__fines-item user__fines-item-paid">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              paid
+            </div>
+          </li>
+          <li class="user__fines-item">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              unpaid
+            </div>
+          </li>
+          <li class="user__fines-item user__fines-item-paid">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              paid
+            </div>
+          </li>
+          <li class="user__fines-item user__fines-item-paid">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              paid
+            </div>
+          </li>
+          <li class="user__fines-item">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              unpaid
+            </div>
+          </li>
+          <li class="user__fines-item">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              unpaid
+            </div>
+          </li>
+          <li class="user__fines-item">
+            <div class='user__fines-description user__fines-cell'>
+              Speed under 300 km/h
+            </div>
+            <div class='user__fines-amount user__fines-cell'>
+              500$
+            </div>
+            <div class='user__fines-deadline user__fines-cell'>
+              12-12-2022
+            </div>
+            <div class='user__fines-name user__fines-cell'>
+              David Shnaider
+            </div>
+            <div class='user__fines-status user__fines-cell'>
+              unpaid
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
 
   </div>
 </section>

@@ -4,8 +4,8 @@ const { Client } = pg.default;
 
 export const client = new Client({
   database: 'fine',
-  user: 'myuser',
-  password: 'mypassword',
-  port: 5432,
+  user: 'postgres',
+  password: 'postgres',
+  port: 5556,
   host: 'localhost',
 });
