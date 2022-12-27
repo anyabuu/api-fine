@@ -17,9 +17,20 @@
         Police
       </h1>
     </div>
-    <button class='header__user-logout-button button'>
-      Logout
-    </button>
+    <nav class='header__nav'>
+      <ul class='header__nav-list'>
+        <li class='header__nav-list-item'>
+          <a class='header__nav-link' href='#'>
+            Profile
+          </a>
+        </li>
+        <li class='header__nav-list-item'>
+          <a class='header__nav-link-logout' href='#'>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>
 
@@ -28,6 +39,12 @@
     <h2 class='admin__hello-title title'>
       Officer page
     </h2>
+    <button class='admin__get-user-button button'>
+      Get all users
+    </button>
+    <ul class='admin__user-list'>
+
+    </ul>
     <h2 class='admin__title title'>
       Create new fine
     </h2>
@@ -35,18 +52,30 @@
       <label class='admin__form-label'>
         Driver ID
         <input class='admin__form-input input' type='number' name='userId' placeholder='00000'>
+        <div class='admin__element-error error-message'>
+
+        </div>
       </label>
       <label class='admin__form-label'>
         Description
         <textarea class='admin__form-input input' type='text' name='description' placeholder='Over speed'></textarea>
+        <div class='admin__element-error error-message'>
+
+        </div>
       </label>
       <label class='admin__form-label'>
         Amount
         <input class='admin__form-input input' type='number' name='amount' placeholder='500'>
+        <div class='admin__element-error error-message'>
+
+        </div>
       </label>
       <label class='admin__form-label'>
         Deadline
         <input class='admin__form-input input' type='date' name='deadline'>
+        <div class='admin__element-error error-message'>
+
+        </div>
       </label>
       <button class='admin__form-button button'>
         Fine driver

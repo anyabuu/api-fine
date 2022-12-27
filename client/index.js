@@ -136,7 +136,6 @@ document.addEventListener('DOMContentLoaded', async () => {
           .then((data) => {
 
             console.log(data)
-            console.log(data.name)
 
             if (data.token) {
               storage.token = data.token;
@@ -167,9 +166,88 @@ document.addEventListener('DOMContentLoaded', async () => {
   const userInfoObj = JSON.parse(sessionStorage.getItem('userinfo'))
 
 
-  if (userPage){
+  if (userPage) {
+
+    const profilePage = document.querySelector('.user__profile');
+    const finePage = document.querySelector('.user__fine-board');
+    const profileLink = document.querySelector('.header__nav-link-profile');
+    const fineLink = document.querySelector('.header__nav-link-fine');
+
+    profileLink.onclick = () => {
+      finePage.classList.add('disable');
+      profilePage.classList.remove('disable')
+    }
+
+    fineLink.onclick = () => {
+      profilePage.classList.add('disable');
+      finePage.classList.remove('disable')
+    }
+
+    const balance = document.querySelector('.header__balance');
     const userTitle = document.querySelector('.user__title-name');
-    userTitle.innerText = `${storage.email}`
+    userTitle.innerText = `${storage.email}`;
+    const balanceForm = document.querySelector('.user__balance-form');
+
+
+
+     fetch(`${HOST}/balance`, {
+      method: "GET",
+      headers: { token: userInfoObj.token }
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data)
+        balance.innerText = `Balance: ${data.balance}$`
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+
+    balanceForm.addEventListener('submit', async(event) => {
+      event.preventDefault();
+      const body = new FormData(balanceForm);
+      const balanceTopUpValue = document.querySelector('.user__balance-input').value
+      console.log(body)
+      console.log(userInfoObj.token)
+
+      fetch(`${HOST}/balance/top-up`, {
+        body,
+        method: "POST",
+        headers: { token: userInfoObj.token }
+
+      })
+        .then((response) => {
+          return response.json()
+        })
+        .then((data) => {
+
+          fetch(`${HOST}/balance`, {
+            method: "GET",
+            headers: { token: userInfoObj.token }
+          })
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              console.log(data)
+              balance.innerText = `Balance: ${Number(data.balance) + Number(balanceTopUpValue)} $`
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+
+          alert(data.message)
+
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+
+
+    })
+
 
 
     changeEmailForm.addEventListener('submit', async (event) => {
@@ -248,25 +326,108 @@ document.addEventListener('DOMContentLoaded', async () => {
           console.log(err)
         })
     })
+
+
+    fetch(`${HOST}/fines`, {
+      method: "GET",
+      headers: { token: userInfoObj.token }
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+
+        console.log(data)
+        // const list = document.querySelector('.user__fines-list');
+        //
+        // // list.innerHTML=''
+        //
+        //
+        // data.forEach(function({ id, description, deadline, date, amount, paid }){
+        //   const listItem = document.createElement('li');
+        //   listItem.classList.add('user__fines-item');
+        //   const itemDescription = document.createElement('div')
+        //   itemDescription.classList.add('user__fines-description')
+        //   itemDescription.innerText = `${description}`;
+        //   itemDescription.append(listItem);
+        //   list.append(listItem);
+        // })
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+
+
+
+
   }
 
 
 
   if (adminPage){
+
+    const getUserButton = document.querySelector('.admin__get-user-button');
+
+    getUserButton.onclick = () => {
+
+      fetch(`${HOST}/users`, {
+        method: "GET",
+        headers: { token: userInfoObj.token }
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          const list = document.querySelector('.admin__user-list');
+
+          list.innerHTML=''
+
+          data.forEach(function({ id, email, name }){
+            const listItem = document.createElement('li');
+            listItem.innerText = `${id} ${name} ${email}`;
+            list.append(listItem);
+          })
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
+
+
+
+
     fineForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const body = new FormData(fineForm);
 
+      if (!fineForm.elements.userId.value || !fineForm.elements.description.value || !fineForm.elements.amount.value || !fineForm.elements.deadline.value){
+        const formEl = [fineForm.elements.userId, fineForm.elements.description, fineForm.elements.amount, fineForm.elements.deadline]
+        formEl.forEach(function(item){
+            if (item.value === ''){
+              return item.nextElementSibling.innerText = 'This field is required'
+            } else {
+              item.nextElementSibling.innerText = ''
+            }
+          })
+
+        return
+      }
+
+
       fetch(`${HOST}/fine`, {
         body,
         method: "POST",
+        headers: { token: userInfoObj.token }
       })
         .then((response) => {
           return response.json();
         })
         .then((data) => {
           console.log(data)
+          fineForm.reset()
+          alert(data.message)
+
         })
         .catch((err) => {
           console.log(err)
