@@ -7,6 +7,7 @@ const { Client } = pg.default;
 import tls from 'node:tls';
 export const client = new Client({
 
+
   connectionString:
     process.env.PSQL_CONNECTION ||
     'postgresql://myuser:mypassword@localhost:5432/fine',
@@ -16,5 +17,6 @@ export const client = new Client({
   password: 'postgres',
   port: 5556,
   host: 'localhost',
+
 
 });
