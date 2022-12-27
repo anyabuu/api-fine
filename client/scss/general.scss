@@ -24,13 +24,19 @@ html {
   display: none;
 }
 
+.title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
 .button {
   font-size: 1.5rem;
   line-height: 1.2;
   font-weight: 800;
   border-radius: 8px;
   width: 60%;
-  padding: 8px;
+  padding: 15px;
   cursor: pointer;
   text-align: center;
   border: 1px black solid;
@@ -41,7 +47,7 @@ html {
   line-height: 1.1;
   font-weight: 400;
   width: 285px;
-  padding: 10px;
+  padding: 13px;
   border-radius: 6px;
   border: 1px solid black;
 }
@@ -54,12 +60,5 @@ html {
   padding-top: 3px;
 }
 
-.cell {
-  border-right: 1px solid black;
-  padding: 10px;
-  font-size: 1.3rem;
-  line-height: 1.1;
-  font-weight: 400;
-}
 
 
