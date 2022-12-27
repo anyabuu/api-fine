@@ -2,36 +2,150 @@
   padding-top: 40px;
 }
 
+.user__profile {
+  padding-bottom: 40px;
+}
+
+.header__balance {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+
 .user__title {
   font-weight: 800;
   font-size: 2rem;
   line-height: 1.1;
   color: black;
+  padding-bottom: 20px;
 }
 
-.user__fines-title {
-  padding-top: 30px;
-  padding-bottom: 20px;
-  font-weight: 400;
-  font-size: 2rem;
+.user__change-title {
+  font-weight: 600;
+  font-size: 1.5rem;
   line-height: 1.1;
 }
 
-.main-cell {
+.user__change-email-form {
+  display: flex;
+  padding-top: 20px;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.user__change-label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user__change-input {
+  padding: 8px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 400;
+  width: 285px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+
+.user__change-button {
+  font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px black solid;
+  width: 150px;
+  padding: 8px;
+  background-color: darkseagreen;
+}
+
+.user__change-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user__change-password-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+
+
+.user__fine-select-group {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.user__fines-select {
+  width: 90px;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border: 2px solid darkblue;
+  appearance: none;
+  cursor: pointer;
+}
+
+.user__select-wrapper {
+  position: relative;
+  &:after {
+    content: "▼";
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    pointer-events: none;
+  }
+}
+
+.user__fines-type {
+  padding-bottom: 20px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.user__fines-table {
+  margin-top: 22px;
 }
 
 .user__fines-item {
   display: flex;
   border: 1px solid black;
   align-items: center;
-  background-color: antiquewhite;
+  background-color: pink;
+}
+
+.user__fines-main-cell {
+  border-right: 1px solid black;
+  padding: 15px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.main-cell {
+  font-weight: 800;
+  background-color: skyblue;
+  text-align: center;
+}
+
+.user__fines-cell {
+  border-right: 1px solid black;
+  padding: 13px;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 400;
 }
 
 .user__fines-description {
   width: 30%;
-  border-right: 1px solid black;
-  padding: 10px;
 }
 
 .user__fines-amount {
@@ -48,5 +162,9 @@
 
 .user__fines-status {
   width: 15%;
+}
+
+.user__fines-item-paid {
+  background-color: darkseagreen;
 }
 

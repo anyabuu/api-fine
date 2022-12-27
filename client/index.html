@@ -25,18 +25,21 @@
 
     <div class='login-form-wrapper'>
       <div class="disable container authorization__container login">
-        <h2 class="authorization__title">
+        <h2 class="authorization__title title">
           Authorization
         </h2>
         <form action="" class='authorization__login-form authorization-form'>
-          <label class="authorization__login-label">
-            <input class="authorization__input input" type="email" name="email" placeholder="Enter your email">
+          <label class="authorization__login-label" for="loginEmail">
+            <input class="authorization__input input" id="loginEmail" type="email" name="email" placeholder="Enter your email">
             <div class="authorization__input-email-message error-message"></div>
           </label>
-          <label class="authorization__label">
-            <input class="authorization__input input" type="password" name="password" placeholder="Enter your password">
+          <label class="authorization__label" for="loginPassword">
+            <input class="authorization__input input" id="loginPassword" type="password" name="password" placeholder="Enter your password">
             <div class="authorization__input-password-message error-message"></div>
           </label>
+          <div class='authorization__general-error-message error-message'>
+
+          </div>
           <button class="authorization__button button">
             Login
           </button>
@@ -51,25 +54,31 @@
     </div>
 
     <div class='registration-form-wrapper disable'>
-      <div class="container authorization__container registration">
-        <h2 class="registration__title">
+      <div class="container registration">
+        <h2 class="registration__title title">
           Registration
         </h2>
-        <form action="" class='registration__form authorization-form'>
-          <label class="registration__label">
-            <input class="registration__input input" type="email" name="email" placeholder="Enter your email">
-            <div class="registration__input-message"></div>
+        <form action="" class='registration__form'>
+          <label class="registration__label" for="registrationName">
+            Name
+            <input class="registration__input input" id='registrationName' type="name" name="name" placeholder="Jack">
+            <div class="registration__input-message error-message"></div>
           </label>
-          <label class="registration__label">
-            <input class="registration__input input" type="password" name="password" placeholder="Create your password">
-            <div class="registration__input-message"></div>
+          <label class="registration__label" for='registrationEmail'>
+            Email address
+            <input class="registration__input input" id='registrationEmail' type="email" name="email" placeholder="example@ex.com">
+            <div class="registration__input-message error-message"></div>
           </label>
-          <label class="registration__label">
-            <input class="registration__input input" type="password" name="password" placeholder="Confirm your password">
-            <div class="registration__input-message"></div>
+          <label class="registration__label" for='registrationPassword'>
+            Password
+            <input class="registration__input input" id='registrationPassword' type="password" name="password" placeholder="00000000">
+            <div class="registration__input-message error-message"></div>
           </label>
+          <div class='registration__general-error-message error-message'>
+
+          </div>
           <button class="registration__button button">
-            Registration
+            Register
           </button>
         </form>
         <p class='registration__login-text'>

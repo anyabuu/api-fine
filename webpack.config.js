@@ -1,7 +1,6 @@
-const {resolve, join} = require('path');
+const { resolve, join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './client/index.js',
@@ -16,12 +15,12 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env'],
-            plugins: ["@babel/plugin-transform-runtime"]
-          }
-        }
+            plugins: ['@babel/plugin-transform-runtime'],
+          },
+        },
       },
       {
         test: /\.s[ac]ss$/i,
@@ -29,32 +28,35 @@ module.exports = {
           // Creates `style` nodes from JS strings
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
-          "css-loader",
+          'css-loader',
           // Compiles Sass to CSS
-          "sass-loader",
+          'sass-loader',
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./client/index.html",
-      filename: 'index.html'
+      template: './client/index.html',
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './client/user.html',
-      filename: 'user.html'
+      filename: 'user.html',
     }),
-    new MiniCssExtractPlugin ( {
-      filename: '[name]-[fullhash].css'
-    })
+    new HtmlWebpackPlugin({
+      template: './client/admin.html',
+      filename: 'admin.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name]-[fullhash].css',
+    }),
   ],
   devServer: {
     static: {
-      directory: join(__dirname, 'client')
+      directory: join(__dirname, 'client'),
     },
     port: 4002,
   },
   devtool: 'inline-source-map',
-}
-
+};

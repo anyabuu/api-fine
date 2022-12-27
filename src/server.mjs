@@ -189,7 +189,7 @@ server.register(
               properties: {
                 message: {
                   type: 'string',
-                  default: 'Your password in incorrect',
+                  default: 'Your password is incorrect',
                 },
               },
             },
@@ -217,7 +217,7 @@ server.register(
 
           return reply
             .status(403)
-            .send({ message: 'Your password in incorrect' });
+            .send({ message: 'Your password is incorrect' });
         }
 
         return reply.status(400).send({ message: 'User does not exit' });
