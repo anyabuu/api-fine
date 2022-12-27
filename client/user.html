@@ -44,58 +44,70 @@
 
 <section class='user'>
   <div class='container user__container'>
-
     <div class='user__profile'>
-      <h2 class='user__title'>
+      <h2 class='user__title title'>
         Driver page
         <p class='user__title-name'>
 
         </p>
       </h2>
 
-      <form action='' class='user__balance-form'>
-        <input class='user__balance-input' name='amount' type='number' placeholder='Enter amount'>
-        <button class='user__up-balance'>
+      <div class='user__balance'>
+        <h2 class='user__balance-title page-title'>
           Top up balance
-        </button>
-      </form>
+        </h2>
+        <form action='' class='user__balance-form'>
+          <label class='user__balance-label' for='balanceAmount'>
+            <input class='user__balance-input input' id='balanceAmount' name='amount' type='number' placeholder='Enter amount'>
+            <div class='user__balance-error error-message'>
 
-      <h2 class='user__change-email-title user__change-title'>
-        Change email
-      </h2>
-      <form action="" class='user__change-email-form'>
-        <label class='user__change-email-label user__change-label' for='changeEmail'>
-          <input class='user__change-email-input user__change-input' id='changeEmail' type='email' name='email' placeholder='Enter new email'>
-          <div class='user__change-email-error error-message'>
+            </div>
+          </label>
+          <button class='user__up-balance-button button'>
+            Top up
+          </button>
+        </form>
+      </div>
 
-          </div>
-        </label>
-        <button class='user__email-update-button user__change-button'>
-          Change
-        </button>
-      </form>
+      <div class='user__email'>
+        <h2 class='user__change-email-title page-title'>
+          Change email
+        </h2>
+        <form action="" class='user__change-email-form'>
+          <label class='user__change-email-label user__change-label' for='changeEmail'>
+            <input class='user__change-email-input user__change-input' id='changeEmail' type='email' name='email' placeholder='Enter new email'>
+            <div class='user__change-email-error error-message'>
 
-      <h2 class='user__change-password-title user__change-title'>
-        Change password
-      </h2>
-      <form action="" class='user__change-password-form'>
-        <label class='user__change-password-label user__change-label' for='oldPassword'>
-          <input class='user__change-email-input user__change-input' id='oldPassword' type='password' name='oldPassword' placeholder='Enter old password'>
-          <div class='user__change-password-error error-message'>
+            </div>
+          </label>
+          <button class='user__email-update-button user__change-button'>
+            Change
+          </button>
+        </form>
+      </div>
 
-          </div>
-        </label>
-        <label class='user__change-password-label user__change-label' for='newPassword'>
-          <input class='user__change-email-input user__change-input' id='newPassword' type='password' name='password' placeholder='Enter new password'>
-          <div class='user__change-password-error error-message'>
+      <div class='user__password'>
+        <h2 class='user__change-password-title page-title'>
+          Change password
+        </h2>
+        <form action="" class='user__change-password-form'>
+          <label class='user__change-password-label user__change-label' for='oldPassword'>
+            <input class='user__change-email-input user__change-input' id='oldPassword' type='password' name='oldPassword' placeholder='Enter old password'>
+            <div class='user__change-password-error error-message'>
 
-          </div>
-        </label>
-        <button class='user__password-update-button user__change-button'>
-          Change
-        </button>
+            </div>
+          </label>
+          <label class='user__change-password-label user__change-label' for='newPassword'>
+            <input class='user__change-email-input user__change-input' id='newPassword' type='password' name='password' placeholder='Enter new password'>
+            <div class='user__change-password-error error-message'>
 
-      </form>
+            </div>
+          </label>
+          <button class='user__password-update-button user__change-button'>
+            Change
+          </button>
+        </form>
+      </div>
     </div>
 
     <div class='user__fine-board disable'>

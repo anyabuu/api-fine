@@ -25,9 +25,15 @@ html {
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.1;
   font-weight: 800;
+}
+
+.page-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.1;
 }
 
 .button {
@@ -35,8 +41,7 @@ html {
   line-height: 1.2;
   font-weight: 800;
   border-radius: 8px;
-  width: 60%;
-  padding: 15px;
+  padding: 8px;
   cursor: pointer;
   text-align: center;
   border: 1px black solid;
@@ -47,7 +52,7 @@ html {
   line-height: 1.1;
   font-weight: 400;
   width: 285px;
-  padding: 13px;
+  padding: 8px;
   border-radius: 6px;
   border: 1px solid black;
 }
@@ -58,6 +63,7 @@ html {
   font-weight: 400;
   color: brown;
   padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 

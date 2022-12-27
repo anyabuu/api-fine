@@ -10,9 +10,9 @@ export const client = new Client({
 
   connectionString:
     process.env.PSQL_CONNECTION ||
-    'postgresql://myuser:mypassword@localhost:5432/fine',
+    'postgresql://myuser:mypassword@localhost:5432/postgres',
 
-  database: 'fine',
+  database: 'postgres',
   user: 'postgres',
   password: 'postgres',
   port: 5556,

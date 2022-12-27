@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function lengthValidate(element, minLength, maxLength) {
     if (element.value.length < minLength || element.value.length > maxLength) {
-      return element.nextElementSibling.innerText = `*It should be more then ${minLength} and less then ${maxLength} symbols!`;
+      return element.nextElementSibling.innerText = `*It should be more then ${minLength} and less then ${maxLength}`;
     } else {
       return element.nextElementSibling.innerText = '';
     }
@@ -208,9 +208,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     balanceForm.addEventListener('submit', async(event) => {
       event.preventDefault();
       const body = new FormData(balanceForm);
-      const balanceTopUpValue = document.querySelector('.user__balance-input').value
-      console.log(body)
-      console.log(userInfoObj.token)
+
+      if (lengthValidate(balanceForm.elements.amount, 1, 1000000) !== ''){
+        console.log('not')
+        return
+      }
 
       fetch(`${HOST}/balance/top-up`, {
         body,
@@ -231,13 +233,13 @@ document.addEventListener('DOMContentLoaded', async () => {
               return response.json();
             })
             .then((data) => {
-              console.log(data)
-              balance.innerText = `Balance: ${Number(data.balance) + Number(balanceTopUpValue)} $`
+              balance.innerText = `Balance: ${Number(data.balance)} $`
             })
             .catch((err) => {
               console.log(err)
             })
 
+          balanceForm.reset();
           alert(data.message)
 
         })

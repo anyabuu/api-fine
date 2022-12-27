@@ -12,31 +12,39 @@
   line-height: 1.1;
 }
 
-.user__title {
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 1.1;
-  color: black;
-  padding-bottom: 20px;
+.user__balance {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.user__change-title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.1;
+.user__balance-title {
+  padding-bottom: 15px;
 }
 
+.user__balance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.user__up-balance-button {
+  width: 150px;
+  background-color: darkseagreen;
+}
+
+
+.user__change-email-title {
+  padding-bottom: 15px;
+}
 .user__change-email-form {
   display: flex;
-  padding-top: 20px;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .user__change-label {
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .user__change-input {
@@ -65,7 +73,7 @@
 .user__change-password-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 
 .user__change-password-title {
