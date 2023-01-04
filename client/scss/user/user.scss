@@ -8,7 +8,7 @@
 
 .header__balance {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.1;
 }
 
@@ -120,6 +120,7 @@
 }
 
 .user__fines-table {
+  width: 90%;
   margin-top: 22px;
 }
 
@@ -128,6 +129,7 @@
   border: 1px solid black;
   align-items: center;
   background-color: pink;
+  position: relative;
 }
 
 .user__fines-main-cell {
@@ -153,26 +155,30 @@
 }
 
 .user__fines-description {
-  width: 30%;
+  width: 31%;
 }
 
 .user__fines-amount {
-  width: 15%;
+  width: 23%;
 }
 
 .user__fines-deadline {
-  width: 15%;
-}
-
-.user__fines-name {
-  width: 25%;
+  width: 23%;
 }
 
 .user__fines-status {
-  width: 15%;
+  width: 23%;
+  border-right: none;
 }
 
 .user__fines-item-paid {
+  background-color: darkseagreen;
+}
+
+.user__fines-pay-button {
+  position: absolute;
+  left: 102%;
+  width: 85px;
   background-color: darkseagreen;
 }
 
