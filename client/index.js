@@ -12,7 +12,6 @@ import { apiClient } from './js/api/client';
 import { finesRender } from './js/renders/fineRender';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const HOST = 'http://localhost:3000/api';
   const storage = sessionStorage.userinfo
     ? JSON.parse(sessionStorage.userinfo)
     : {};
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   const changePasswordForm = document.querySelector('.user__change-password-form');
 
   const logoutButton = document.querySelector('.header__nav-link-logout');
-
 
   function lengthValidate(element, minLength, maxLength) {
     if (element.value.length < minLength || element.value.length > maxLength) {
@@ -116,7 +114,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 
-
   async function globalLogin(body, isLogin = true) {
     const { email, token } = await loginUser(body);
 
@@ -137,14 +134,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     } else {
       registrationForm.reset();
     }
-
     location.href = 'http://localhost:4002/user.html';
   }
 
-
-
-
-  const userInfoObj = JSON.parse(sessionStorage.getItem('userinfo'))
+  const userInfoObj = JSON.parse(sessionStorage.getItem('userinfo'));
 
   if (userPage) {
 
@@ -305,10 +298,11 @@ document.addEventListener('DOMContentLoaded', async () => {
           })
         return
       }
-        await makeFine(body,{token: userInfoObj.token});
-        fineForm.reset()
+        const readyFine = await makeFine(body,{token: userInfoObj.token});
+        fineForm.reset();
+
+        alert(readyFine.message)
     })
   }
 
-  console.log(sessionStorage.userinfo)
 });

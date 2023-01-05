@@ -3,19 +3,19 @@ const list = document.querySelector('.user__fines-list');
 export const finesRender = (fines) => {
   list.innerHTML = '';
 
-  fines.forEach(({ id, description, deadline, amount, paid }) => {
+  fines.forEach(({ id, description, date, deadline, amount, paid }) => {
     const listItem = document.createElement('li');
     listItem.classList.add('user__fines-item');
     listItem.setAttribute('value', `${id}`);
 
-    const date = new Date(Date.parse(deadline));
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDay();
+    const formatDate = new Date(Date.parse(deadline));
+    const year = formatDate.getFullYear();
+    const month = formatDate.getMonth() + 1;
+    const day = formatDate.getDate();
     const yearDate = [
-      day.toString().padStart(2, '0'),
-      month.toString().padStart(2, '0'),
       year,
+      month.toString().padStart(2, '0'),
+      day.toString().padStart(2, '0'),
     ].join('-')
 
     let paidStatus = 'unpaid'
